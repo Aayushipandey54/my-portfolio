@@ -1,0 +1,106 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Personal Protfolio
+    </title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+
+    <header class  = "header">
+        <a href = "#" class = "logo">Aayushi</a>
+
+        <nav class = "navbar">
+            <a href = "#" class="active">Home</a>
+            <a href = "#about">About</a>
+            <a href = "#">Services</a>
+            <a href = "#">Portfolio</a>
+            <a href = "#contact">Contact</a>
+        </nav>
+
+
+    </header>
+
+    <section class = "home" id = "home">
+        <div class = "home-content">
+            <h1>Hi, I am Aayushi</h1>
+            <h3>Data scientist</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Beatae quo suscipit necessitatibus, nostrum nemo cumque quasi nam quos quaerat officiis veniam,
+                 aperiam itaque accusantium doloribus nisi repellendus! Ratione, molestias ut.</p>
+            <div class="btn-box">
+                <a href = "#"> Hire me</a>
+                <a herf="#">let's Talk</a>
+            </div>
+
+        <div class = "home-sci">
+            <a href ="#"><i class='bx bxl-facebook'></i></a>
+            <a href ="#"><i class='bx bxl-twitter' ></i></a>
+            <a href ="#"><i class='bx bxl-linkedin' ></i></a>
+        </div>
+        <span class = "home-imgHover"></span>
+    </section>
+
+    <div class="about-page">
+        <section class="about" id="about">
+            <div class="above">
+                <h2>About Me</h2>
+                <p>"As a dedicated second-year student pursuing a diploma in Artificial Intelligence and Machine Learning, I am Aayushi Pandey. 🚀 My journey into the world of AI was sparked during my enriching internship as an IT intern at Abbott, where I discovered my true passion for data science. 🧠 Fascinated by the inner workings of AI tools like Alexa and Google Assistant, I embarked on a learning path to understand the backend complexities. Currently, I am actively engaged in mastering Python libraries for data science and diving deep into various machine learning algorithms. 🐍🤖
+    
+                    This curiosity and passion led me to choose an AIML diploma, where over the past year, I've immersed myself in a wealth of knowledge. I've not only gained practical experience but have also earned multiple certificates 📜 and actively participated in conferences to stay abreast of the latest developments in the field. 🌐 My journey has instilled in me a commitment to continuous growth and a desire to contribute meaningfully to the exciting and evolving landscape of Artificial Intelligence.
+                    
+                    I am enthusiastic about leveraging my skills and knowledge to make a positive impact in the realm of data science. Open to collaboration 🤝 and eager to explore new opportunities, I look forward to connecting with like-minded professionals and contributing to the advancement of AI technologies. 🔍✨"</p>
+            </div>
+        </section>
+    </div>
+    
+    
+<div class="contact-page">
+    <section class="contact-form" id="contact">
+        <div class="contact-form">
+            <!-- Your contact form code goes here -->
+            <h2>Contact Form</h2>
+            <form action="/submit-contact-form" method="post">
+                <!-- Your form fields here -->
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message"></textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </section>
+</div>
+<script>
+    window.addEventListener('scroll', function() {
+        var header = document.querySelector('.header');
+        var navLinks = document.querySelectorAll('.navbar a');
+        var sections = document.querySelectorAll('section');
+
+        sections.forEach(function(section) {
+            var top = section.offsetTop;
+            var height = section.clientHeight;
+
+            if (window.pageYOffset >= top && window.pageYOffset < top + height) {
+                header.style.backgroundColor = '#081b29'; // Change background color
+                navLinks.forEach(function(link) {
+                    link.classList.remove('active');
+                });
+                var correspondingLink = document.querySelector('a[href="#' + section.id + '"]');
+                if (correspondingLink) {
+                    correspondingLink.classList.add('active');
+                }
+            }
+        });
+    });
+</script>
+</body>
+
+</html>
